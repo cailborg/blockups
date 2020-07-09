@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots TestComponent Primary 1`] = `
+<div
+  className="sc-AxjAm lkAkSP"
+  data-testid="test-component"
+>
+  <h1
+    className="sc-AxirZ bVFGmZ heading"
+  >
+    I'm the test component
+  </h1>
+  <h2
+    className="sc-AxiKw bOTXee"
+  >
+    Im a description
+  </h2>
+</div>
+`;
+
+exports[`Storyshots TestComponent Secondary 1`] = `
+<div
+  className="sc-AxjAm cJIQQi"
+  data-testid="test-component"
+>
+  <h1
+    className="sc-AxirZ bVFGmZ heading"
+  >
+    I'm the test component
+  </h1>
+  <h2
+    className="sc-AxiKw bOTXee"
+  >
+    Im a description
+  </h2>
+</div>
+`;
