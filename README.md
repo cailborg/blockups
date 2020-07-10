@@ -1,3 +1,5 @@
+<img src="https://cailborg.github.io/assets/Logo.png" alt="logo"/>
+
 ## Blockups
 
 > A starter kit for building sharable React UI libraries
