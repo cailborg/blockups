@@ -5,10 +5,4 @@ export default {
   title: "TestComponent",
 };
 
-export const Primary = () => (
-  <TestComponent theme="primary" text="im some cool text" />
-);
-
-export const Secondary = () => (
-  <TestComponent theme="secondary" text="im some even cooler text" />
-);
+export const Primary = () => <TestComponent text="im some cool text" />;
