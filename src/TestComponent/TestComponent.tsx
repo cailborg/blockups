@@ -1,8 +1,11 @@
 import React from "react";
-
-import { TestComponentProps } from "./TestComponent.types";
-
 import styled from "styled-components";
+import { color } from "styled-system";
+
+interface TestComponentProps {
+  theme: "primary" | "secondary";
+  text: string;
+}
 
 const StyledDiv = styled.div`
   background-color: yellow;
