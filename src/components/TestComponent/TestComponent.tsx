@@ -21,7 +21,7 @@ const StyledHeading = styled.h1`
 const StyledDescription = styled.h2``;
 
 const TestComponent: React.FC<TestComponentProps> = ({ text }) => (
-  <StyledDiv data-testid="test-component" color="black" bg="blue">
+  <StyledDiv data-testid="test-component" color="black">
     <StyledHeading className="heading">I'm the test component</StyledHeading>
     <StyledDescription>{text}</StyledDescription>
   </StyledDiv>
