@@ -1,9 +1,16 @@
-const path = require("path");
-
 module.exports = {
-  stories: ["../src/**/*.stories.tsx"],
+  stories: ["../src/**/*.stories.*"],
   // Add any Storybook addons you want here: https://storybook.js.org/addons/
-  addons: [],
+  addons: [
+    {
+      name: "@storybook/addon-docs",
+      options: {
+        configureJSX: true,
+        babelOptions: {},
+        sourceLoaderOptions: null,
+      },
+    },
+  ],
   webpackFinal: async (config) => {
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
@@ -12,7 +19,7 @@ module.exports = {
         presets: [["react-app", { flow: false, typescript: true }]],
       },
     });
-    config.resolve.extensions.push(".ts", ".tsx");
+    config.resolve.extensions.push(".ts", ".tsx", ".mdx");
 
     return config;
   },
