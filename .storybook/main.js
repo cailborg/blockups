@@ -19,7 +19,7 @@ module.exports = {
         presets: [["react-app", { flow: false, typescript: true }]],
       },
     });
-    config.resolve.extensions.push(".ts", ".tsx");
+    config.resolve.extensions.push(".ts", ".tsx", ".mdx");
 
     return config;
   },
