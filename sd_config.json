@@ -18,6 +18,16 @@
           "destination": "src/tokens/design-tokens.scss"
         }
       ]
+    },
+    "js": {
+      "transformGroup": "js",
+      "files": [
+        {
+          "format": "javascript/object",
+          "name": "tokens",
+          "destination": "src/tokens/tokens.js"
+        }
+      ]
     }
   }
 }

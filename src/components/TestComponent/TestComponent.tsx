@@ -1,17 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import { color } from "styled-system";
-
-interface StyleProps {
-  bg?: string;
-}
+import { theme } from "../../theme";
 
 interface TestComponentProps {
   text: string;
 }
 
-const StyledDiv = styled.div<StyleProps>`
-  ${color}
+const StyledDiv = styled.div`
+  color: ${theme.color("primary", 9)};
+  background: ${theme.color("success", 3)};
   border: 1px solid black;
   padding: 16px;
   width: 360px;
@@ -25,7 +22,7 @@ const StyledHeading = styled.h1`
 const StyledDescription = styled.h2``;
 
 const TestComponent: React.FC<TestComponentProps> = ({ text }) => (
-  <StyledDiv data-testid="test-component" color="black" bg="blue">
+  <StyledDiv data-testid="test-component">
     <StyledHeading className="heading">I'm the test component</StyledHeading>
     <StyledDescription>{text}</StyledDescription>
   </StyledDiv>
