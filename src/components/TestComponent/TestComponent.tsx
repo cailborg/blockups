@@ -10,13 +10,13 @@ const StyledDiv = styled.div`
   color: ${theme.color("primary", 9)};
   background: ${theme.color("success", 3)};
   border: 1px solid black;
-  padding: 16px;
+  padding: ${theme.space(2)};
   width: 360px;
   text-align: center;
 `;
 
 const StyledHeading = styled.h1`
-  font-size: 32px;
+  font-size: ${theme.fontSize(5)};
 `;
 
 const StyledDescription = styled.h2``;

@@ -23,9 +23,9 @@
       "transformGroup": "js",
       "files": [
         {
-          "format": "javascript/object",
+          "format": "javascript/es6",
           "name": "tokens",
-          "destination": "src/tokens/tokens.js"
+          "destination": "src/tokens/design-tokens.js"
         }
       ]
     }
