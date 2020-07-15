@@ -25,6 +25,8 @@
     "babel-preset-react-app": "^9.1.2",
     "identity-obj-proxy": "^3.0.0",
     "jest": "25.5.4",
+    "node": "^14.5.0",
+    "node-fetch": "^2.6.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-is": "^16.13.1",
@@ -47,6 +49,6 @@
     "storybook:export": "build-storybook",
     "test": "jest",
     "test:watch": "jest --watch",
-    "token": "style-dictionary build clean -c ./sd_config.json"
+    "figma": "node scripts/figma.mjs"
   }
 }
