@@ -1,21 +1,6 @@
 import fs from "fs";
 import fetch from "node-fetch";
 
-const nonFigmaDefinedStyleProperties = {
-  borderStyles: {
-    None: { value: "none" },
-    Dotted: { value: "dotted" },
-    Solid: { value: "solid" },
-  },
-  durations: {
-    Instant: { value: "0s" },
-    Immediate: { value: "0.15s" },
-    Quick: { value: "0.25s" },
-    Moderate: { value: "0.5s" },
-    Slow: { value: "1s" },
-  },
-};
-
 //////////////////////////////////////////////
 
 const extractStyleProperties = (layer) => {
@@ -34,6 +19,11 @@ const extractStyleProperties = (layer) => {
         ),
       };
 
+    case "space":
+      return {
+        space: Array.from(layer.children.map((space) => space.size.x)),
+      };
+
     default:
       return {};
   }
@@ -42,7 +32,7 @@ const extractStyleProperties = (layer) => {
 (async () => {
   try {
     const response = await fetch(
-      `https://api.figma.com/v1/files/alc7Ukil6ncg1lCB2K45Ll`,
+      `https://api.figma.com/v1/files/alc7Ukil6ncg1lCB2K45Ll?geometry=paths`,
 
       {
         headers: {
@@ -53,19 +43,16 @@ const extractStyleProperties = (layer) => {
 
     const file = await response.json();
 
-    console.log(file.document.children[1].children[0].fills[0], "output");
-
-    const styleDictionary = file.document.children[1].children.reduce(
+    const theme = file.document.children[1].children.reduce(
       (accumulator, layer) => ({
         ...accumulator,
         ...extractStyleProperties(layer),
-      }),
-      nonFigmaDefinedStyleProperties
+      })
     );
 
-    console.log(styleDictionary);
+    console.log(theme);
 
-    fs.writeFileSync("src/theme/figma.json", JSON.stringify(styleDictionary));
+    fs.writeFileSync("src/theme/figma.json", JSON.stringify(theme));
 
     process.exit();
   } catch (error) {
