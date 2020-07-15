@@ -3,6 +3,21 @@ import fetch from "node-fetch";
 
 //////////////////////////////////////////////
 
+const nonFigmaDefinedStyleProperties = {
+  borderStyles: {
+    None: { value: "none" },
+    Dotted: { value: "dotted" },
+    Solid: { value: "solid" },
+  },
+  durations: {
+    Instant: { value: "0s" },
+    Immediate: { value: "0.15s" },
+    Quick: { value: "0.25s" },
+    Moderate: { value: "0.5s" },
+    Slow: { value: "1s" },
+  },
+};
+
 const extractStyleProperties = (layer) => {
   switch (layer.name) {
     case "colors":
@@ -10,11 +25,16 @@ const extractStyleProperties = (layer) => {
         colors: Object.fromEntries(
           layer.children.map((colors) => [
             [colors.name],
-            `rgba(${Math.round(colors.fills[0].color.r * 255)}, ${Math.round(
-              colors.fills[0].color.g * 255
-            )}, ${Math.round(colors.fills[0].color.b * 255)}, ${Math.round(
-              colors.fills[0].color.a
-            )})`,
+            Array.from(
+              colors.children.map(
+                (color) =>
+                  `rgba(${Math.round(
+                    color.fills[0].color.r * 255
+                  )}, ${Math.round(color.fills[0].color.g * 255)}, ${Math.round(
+                    color.fills[0].color.b * 255
+                  )}, ${Math.round(color.fills[0].color.a)})`
+              )
+            ),
           ])
         ),
       };
@@ -47,7 +67,8 @@ const extractStyleProperties = (layer) => {
       (accumulator, layer) => ({
         ...accumulator,
         ...extractStyleProperties(layer),
-      })
+      }),
+      nonFigmaDefinedStyleProperties
     );
 
     console.log(theme);
