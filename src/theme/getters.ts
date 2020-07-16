@@ -24,7 +24,7 @@ export function getSpace(index: SpaceIndex, props?: ThemeProps) {
 }
 
 export function getFontSize(index: FontSizeIndex, props?: ThemeProps) {
-  return getTheme(props).fontSize.get(index) + "px";
+  return getTheme(props).fontSize[index] + "px";
 }
 
 export function getLineHeight(lineHeight: LineHeight, props?: ThemeProps) {

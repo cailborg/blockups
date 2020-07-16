@@ -44,6 +44,32 @@ const extractStyleProperties = (layer) => {
         space: Array.from(layer.children.map((space) => space.size.x)),
       };
 
+    case "typography":
+      return {
+        fontSize: Array.from(
+          [
+            ...new Set(
+              Array.from(layer.children.map((type) => type.style.fontSize))
+            ),
+          ].sort((a, b) => a - b)
+        ),
+        fonts: Object.fromEntries(
+          layer.children.map((type) => [
+            [type.name],
+            `${type.style.fontFamily.replace(/\s+/g, "")}, san-serif`,
+          ])
+        ),
+        fontWeight: Object.fromEntries(
+          layer.children.map((type) => [[type.name], type.style.fontWeight])
+        ),
+        lineHeight: Object.fromEntries(
+          layer.children.map((type) => [[type.name], type.style.lineHeightPx])
+        ),
+        letterSpacing: Object.fromEntries(
+          layer.children.map((type) => [[type.name], type.style.letterSpacing])
+        ),
+      };
+
     default:
       return {};
   }

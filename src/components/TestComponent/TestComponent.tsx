@@ -16,7 +16,7 @@ const StyledDiv = styled.div`
 `;
 
 const StyledHeading = styled.h1`
-  font-size: ${theme.fontSize(5)};
+  font-size: ${theme.fontSize(0)};
 `;
 
 const StyledDescription = styled.h2``;

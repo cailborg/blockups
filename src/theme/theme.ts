@@ -74,21 +74,9 @@ const theme = {
     ],
   },
   space: [4, 8, 12, 16, 24, 32, 48, 64, 96, 128, 192, 256, 384, 512, 640, 768],
-  fontSize: new Map([
-    [-3, 10],
-    [-2, 12],
-    [-1, 14],
-    [0, 16],
-    [1, 18],
-    [2, 20],
-    [3, 24],
-    [4, 30],
-    [5, 36],
-    [6, 48],
-    [7, 60],
-    [8, 72],
-    [9, 18],
-  ]),
+
+  fontSize: [10, 12, 14, 16, 18, 20, 24, 32, 48, 64, 96],
+
   lineHeight: {
     narrow: 1.15,
     normal: 1.3,
@@ -120,20 +108,9 @@ export type SpaceIndex =
   | 13
   | 14
   | 15;
-export type FontSizeIndex =
-  | -3
-  | -2
-  | -1
-  | 0
-  | 1
-  | 2
-  | 3
-  | 4
-  | 5
-  | 6
-  | 7
-  | 8
-  | 9;
+
+export type FontSizeIndex = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
+
 export type LineHeight = keyof Theme["lineHeight"];
 
 export default theme;
