@@ -45,7 +45,7 @@ const extractStyleProperties = (layer) => {
                     color.fills[0].color.b * 255
                   )}, ${Math.round(color.fills[0].color.a)})`
               )
-            ),
+            ).reverse(),
           ])
         ),
       };
