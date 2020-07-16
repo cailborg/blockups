@@ -10,6 +10,7 @@ import defaultTheme, {
   Shadows,
   Sizes,
   Durations,
+  BorderStyles,
 } from "./theme";
 
 function getTheme(props: ThemeProps) {
@@ -49,6 +50,13 @@ export function getShadows(shadows: Shadows, props?: ThemeProps) {
 
 export function getDurations(durations: Durations, props?: ThemeProps) {
   return getTheme(props).durations[durations] + "ms";
+}
+
+export function getBorderStyles(
+  borderStyles: BorderStyles,
+  props?: ThemeProps
+) {
+  return getTheme(props).borderStyles[borderStyles];
 }
 
 export function getFontSize(fontSize: FontSize, props?: ThemeProps) {

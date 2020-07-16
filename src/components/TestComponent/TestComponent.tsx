@@ -15,6 +15,7 @@ const StyledDiv = styled.div`
   text-align: center;
   border-radius: ${theme.radius("m")};
   border-width: ${theme.borderWidth("thick")};
+  border-style: ${theme.borderStyle("dotted")};
   box-shadow: ${theme.shadow("medium")};
   animation-duration: ${theme.duration("quick")};
 `;
