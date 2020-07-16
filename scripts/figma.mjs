@@ -149,7 +149,7 @@ const extractStyleProperties = (layer) => {
 
     console.log(theme);
 
-    fs.writeFileSync("src/theme/figma.json", JSON.stringify(theme));
+    fs.writeFileSync("src/theme/tokens.json", JSON.stringify(theme));
 
     process.exit();
   } catch (error) {

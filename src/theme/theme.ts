@@ -1,4 +1,4 @@
-import theme from "./figma.json";
+import theme from "./tokens.json";
 
 export type Theme = typeof theme;
 
