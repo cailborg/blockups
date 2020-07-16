@@ -84,6 +84,12 @@ const extractStyleProperties = (layer) => {
           ])
         ),
       };
+    case "borderWidths":
+      return {
+        borderWidths: Object.fromEntries(
+          layer.children.map((border) => [[border.name], border.strokeWeight])
+        ),
+      };
 
     default:
       return {};

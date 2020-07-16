@@ -98,6 +98,8 @@ const theme = {
     none: 0,
   },
 
+  borderWidths: { none: 0, thin: 1, thick: 2 },
+
   fontSize: {
     "heading-jumbo": 96,
     "heading-xxl": 64,
@@ -140,6 +142,8 @@ export type ColorIndex = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
 export type Space = keyof Theme["space"];
 
 export type Radii = keyof Theme["radii"];
+
+export type BorderWidths = keyof Theme["borderWidths"];
 
 export type FontSize = keyof Theme["fontSize"];
 

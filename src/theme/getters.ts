@@ -6,6 +6,7 @@ import defaultTheme, {
   FontSize,
   LineHeight,
   Radii,
+  BorderWidths,
 } from "./theme";
 // import { fontSize } from "./selectors";
 
@@ -27,6 +28,13 @@ export function getSpace(space: Space, props?: ThemeProps) {
 
 export function getRadii(radii: Radii, props?: ThemeProps) {
   return getTheme(props).radii[radii] + "px";
+}
+
+export function getBorderWidths(
+  borderWidths: BorderWidths,
+  props?: ThemeProps
+) {
+  return getTheme(props).borderWidths[borderWidths] + "px";
 }
 
 export function getFontSize(fontSize: FontSize, props?: ThemeProps) {

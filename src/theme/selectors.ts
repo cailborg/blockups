@@ -6,6 +6,7 @@ import {
   getFontSize,
   getLineHeight,
   getRadii,
+  getBorderWidths,
 } from "./getters";
 
 import { OmitThemeProp, Resolver } from "./types";
@@ -28,4 +29,5 @@ export const space = createSelector(getSpace);
 export const color = createSelector(getColor);
 export const fontSize = createSelector(getFontSize);
 export const lineHeight = createSelector(getLineHeight);
-export const radii = createSelector(getRadii);
+export const radius = createSelector(getRadii);
+export const borderWidth = createSelector(getBorderWidths);
