@@ -1,6 +1,18 @@
 import { ThemeProps } from "./theme";
 
-import { getColor, getSpace, getFontSize, getLineHeight } from "./getters";
+import {
+  getColor,
+  getSpace,
+  getFontSize,
+  getLineHeight,
+  getRadii,
+  getBorderWidths,
+  getShadows,
+  getSizes,
+  getDurations,
+  getBorderStyles,
+  getZIndices,
+} from "./getters";
 
 import { OmitThemeProp, Resolver } from "./types";
 
@@ -22,3 +34,10 @@ export const space = createSelector(getSpace);
 export const color = createSelector(getColor);
 export const fontSize = createSelector(getFontSize);
 export const lineHeight = createSelector(getLineHeight);
+export const radius = createSelector(getRadii);
+export const borderWidth = createSelector(getBorderWidths);
+export const shadow = createSelector(getShadows);
+export const size = createSelector(getSizes);
+export const duration = createSelector(getDurations);
+export const borderStyle = createSelector(getBorderStyles);
+export const zIndex = createSelector(getZIndices);

@@ -7,16 +7,23 @@ interface TestComponentProps {
 }
 
 const StyledDiv = styled.div`
-  color: ${theme.color("primary", 9)};
-  background: ${theme.color("success", 3)};
+  color: ${theme.color("purple", 0)};
+  background: ${theme.color("red", 9)};
   border: 1px solid black;
-  padding: ${theme.space(2)};
-  width: 360px;
+  padding: ${theme.space("m")};
+  width: ${theme.size("m")};
   text-align: center;
+  border-radius: ${theme.radius("m")};
+  border-width: ${theme.borderWidth("thick")};
+  border-style: ${theme.borderStyle("dotted")};
+  box-shadow: ${theme.shadow("medium")};
+  animation-duration: ${theme.duration("quick")};
+  z-index: ${theme.zIndex("auto")};
 `;
 
 const StyledHeading = styled.h1`
-  font-size: ${theme.fontSize(5)};
+  font-size: ${theme.fontSize("heading-xs")};
+  line-height: ${theme.lineHeight("body-3")};
 `;
 
 const StyledDescription = styled.h2``;
