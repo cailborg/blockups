@@ -11,6 +11,7 @@ import {
   getSizes,
   getDurations,
   getBorderStyles,
+  getZIndices,
 } from "./getters";
 
 import { OmitThemeProp, Resolver } from "./types";
@@ -39,3 +40,4 @@ export const shadow = createSelector(getShadows);
 export const size = createSelector(getSizes);
 export const duration = createSelector(getDurations);
 export const borderStyle = createSelector(getBorderStyles);
+export const zIndex = createSelector(getZIndices);

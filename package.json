@@ -49,6 +49,6 @@
     "storybook:export": "build-storybook",
     "test": "jest",
     "test:watch": "jest --watch",
-    "figma": "node scripts/figma.mjs"
+    "figma": "node scripts/getFigmaTokens.mjs"
   }
 }

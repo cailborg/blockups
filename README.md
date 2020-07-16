@@ -21,4 +21,4 @@
 ### Notes
 
 - New components need to be added to `index.ts` manually as a safeguard from accidentally bundling unfinished code
-- Theme file follows the [Theme UI Spec](https://theme-ui.com/theme-spec/)
+- Theme file follows the [Theme UI Spec](https://theme-ui.com/theme-spec/#theme-scales)

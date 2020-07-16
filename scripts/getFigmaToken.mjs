@@ -17,6 +17,17 @@ const nonFigmaDefinedStyleProperties = {
     slow: 1000,
     glacial: 2000,
   },
+  zIndices: {
+    auto: "auto",
+    top: 9999,
+    "500": 500,
+    "400": 400,
+    "300": 300,
+    "200": 200,
+    "100": 100,
+    "0": 0,
+    bottom: -9999,
+  },
 };
 
 const checkNull = (variable) => {
@@ -147,7 +158,7 @@ const extractStyleProperties = (layer) => {
       nonFigmaDefinedStyleProperties
     );
 
-    console.log(theme);
+    // console.log(theme);
 
     fs.writeFileSync("src/theme/tokens.json", JSON.stringify(theme));
 

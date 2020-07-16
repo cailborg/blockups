@@ -18,6 +18,7 @@ const StyledDiv = styled.div`
   border-style: ${theme.borderStyle("dotted")};
   box-shadow: ${theme.shadow("medium")};
   animation-duration: ${theme.duration("quick")};
+  z-index: ${theme.zIndex("auto")};
 `;
 
 const StyledHeading = styled.h1`

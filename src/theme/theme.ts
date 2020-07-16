@@ -20,6 +20,8 @@ export type Shadows = keyof Theme["shadows"];
 
 export type Durations = keyof Theme["durations"];
 
+export type ZIndices = keyof Theme["zIndices"];
+
 export type BorderStyles = keyof Theme["borderStyles"];
 
 export type FontSize = keyof Theme["fontSize"];
