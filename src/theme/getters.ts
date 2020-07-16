@@ -7,6 +7,7 @@ import defaultTheme, {
   LineHeight,
   Radii,
   BorderWidths,
+  Shadows,
 } from "./theme";
 // import { fontSize } from "./selectors";
 
@@ -35,6 +36,10 @@ export function getBorderWidths(
   props?: ThemeProps
 ) {
   return getTheme(props).borderWidths[borderWidths] + "px";
+}
+
+export function getShadows(shadows: Shadows, props?: ThemeProps) {
+  return getTheme(props).shadows[shadows];
 }
 
 export function getFontSize(fontSize: FontSize, props?: ThemeProps) {

@@ -129,6 +129,13 @@ const theme = {
     "button-1": 24,
     "button-2": 20,
   },
+
+  shadows: {
+    high: "0 16px 48px rgba(0, 0, 0, 0.16)",
+    medium: "0 8px 24px rgba(0, 0, 0, 0.16)",
+    low: "0 4px 8px rgba(0, 0, 0, 0.08)",
+    close: "0 2px 8px rgba(0, 0, 0, 0.04)",
+  },
 };
 
 export type Theme = typeof theme;
@@ -144,6 +151,8 @@ export type Space = keyof Theme["space"];
 export type Radii = keyof Theme["radii"];
 
 export type BorderWidths = keyof Theme["borderWidths"];
+
+export type Shadows = keyof Theme["shadows"];
 
 export type FontSize = keyof Theme["fontSize"];
 

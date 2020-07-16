@@ -26,6 +26,8 @@ const checkNull = (variable) => {
   }
 };
 
+const appendUnit = (value, unit) => (!value ? "0" : `${value}${unit}`);
+
 const extractStyleProperties = (layer) => {
   switch (layer.name) {
     case "colors":
@@ -88,6 +90,22 @@ const extractStyleProperties = (layer) => {
       return {
         borderWidths: Object.fromEntries(
           layer.children.map((border) => [[border.name], border.strokeWeight])
+        ),
+      };
+    case "shadows":
+      return {
+        shadows: Object.fromEntries(
+          layer.children.map((shadow) => [
+            shadow.name,
+            `${appendUnit(shadow.effects[0].offset.x, "px")} ${appendUnit(
+              shadow.effects[0].offset.y,
+              "px"
+            )} ${appendUnit(shadow.effects[0].radius, "px")} rgba(${
+              shadow.effects[0].color.r
+            }, ${shadow.effects[0].color.g}, ${
+              shadow.effects[0].color.b
+            }, ${shadow.effects[0].color.a.toFixed(2)})`,
+          ])
         ),
       };
 

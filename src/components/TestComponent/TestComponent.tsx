@@ -15,6 +15,7 @@ const StyledDiv = styled.div`
   text-align: center;
   border-radius: ${theme.radius("m")};
   border-width: ${theme.borderWidth("thick")};
+  box-shadow: ${theme.shadow("medium")};
 `;
 
 const StyledHeading = styled.h1`
