@@ -5,6 +5,7 @@ import defaultTheme, {
   Space,
   FontSize,
   LineHeight,
+  Radii,
 } from "./theme";
 // import { fontSize } from "./selectors";
 
@@ -22,6 +23,10 @@ export function getColor(
 
 export function getSpace(space: Space, props?: ThemeProps) {
   return getTheme(props).space[space] + "px";
+}
+
+export function getRadii(radii: Radii, props?: ThemeProps) {
+  return getTheme(props).radii[radii] + "px";
 }
 
 export function getFontSize(fontSize: FontSize, props?: ThemeProps) {

@@ -89,6 +89,15 @@ const theme = {
     tiny: 4,
   },
 
+  radii: {
+    xl: 24,
+    l: 16,
+    m: 8,
+    s: 4,
+    xs: 2,
+    none: 0,
+  },
+
   fontSize: {
     "heading-jumbo": 96,
     "heading-xxl": 64,
@@ -125,9 +134,12 @@ export type Theme = typeof theme;
 export type ThemeProps = { theme?: Theme };
 
 export type ColorType = keyof Theme["colors"];
+
 export type ColorIndex = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
 
 export type Space = keyof Theme["space"];
+
+export type Radii = keyof Theme["radii"];
 
 export type FontSize = keyof Theme["fontSize"];
 

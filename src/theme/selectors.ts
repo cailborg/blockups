@@ -1,6 +1,12 @@
 import { ThemeProps } from "./theme";
 
-import { getColor, getSpace, getFontSize, getLineHeight } from "./getters";
+import {
+  getColor,
+  getSpace,
+  getFontSize,
+  getLineHeight,
+  getRadii,
+} from "./getters";
 
 import { OmitThemeProp, Resolver } from "./types";
 
@@ -22,3 +28,4 @@ export const space = createSelector(getSpace);
 export const color = createSelector(getColor);
 export const fontSize = createSelector(getFontSize);
 export const lineHeight = createSelector(getLineHeight);
+export const radii = createSelector(getRadii);

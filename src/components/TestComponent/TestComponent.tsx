@@ -13,6 +13,7 @@ const StyledDiv = styled.div`
   padding: ${theme.space("m")};
   width: 360px;
   text-align: center;
+  border-radius: ${theme.radii("m")};
 `;
 
 const StyledHeading = styled.h1`

@@ -18,6 +18,14 @@ const nonFigmaDefinedStyleProperties = {
   },
 };
 
+const checkNull = (variable) => {
+  if (variable == null) {
+    return 0;
+  } else {
+    return variable;
+  }
+};
+
 const extractStyleProperties = (layer) => {
   switch (layer.name) {
     case "colors":
@@ -65,6 +73,15 @@ const extractStyleProperties = (layer) => {
         ),
         letterSpacing: Object.fromEntries(
           layer.children.map((type) => [[type.name], type.style.letterSpacing])
+        ),
+      };
+    case "radii":
+      return {
+        radii: Object.fromEntries(
+          layer.children.map((radii) => [
+            [radii.name],
+            checkNull(radii.cornerRadius),
+          ])
         ),
       };
 
