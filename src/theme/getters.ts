@@ -8,8 +8,9 @@ import defaultTheme, {
   Radii,
   BorderWidths,
   Shadows,
+  Sizes,
+  Durations,
 } from "./theme";
-// import { fontSize } from "./selectors";
 
 function getTheme(props: ThemeProps) {
   return props.theme && props.theme.colors ? props.theme : defaultTheme;
@@ -27,6 +28,10 @@ export function getSpace(space: Space, props?: ThemeProps) {
   return getTheme(props).space[space] + "px";
 }
 
+export function getSizes(sizes: Sizes, props?: ThemeProps) {
+  return getTheme(props).sizes[sizes] + "px";
+}
+
 export function getRadii(radii: Radii, props?: ThemeProps) {
   return getTheme(props).radii[radii] + "px";
 }
@@ -40,6 +45,10 @@ export function getBorderWidths(
 
 export function getShadows(shadows: Shadows, props?: ThemeProps) {
   return getTheme(props).shadows[shadows];
+}
+
+export function getDurations(durations: Durations, props?: ThemeProps) {
+  return getTheme(props).durations[durations] + "ms";
 }
 
 export function getFontSize(fontSize: FontSize, props?: ThemeProps) {

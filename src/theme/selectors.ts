@@ -8,6 +8,8 @@ import {
   getRadii,
   getBorderWidths,
   getShadows,
+  getSizes,
+  getDurations,
 } from "./getters";
 
 import { OmitThemeProp, Resolver } from "./types";
@@ -33,3 +35,5 @@ export const lineHeight = createSelector(getLineHeight);
 export const radius = createSelector(getRadii);
 export const borderWidth = createSelector(getBorderWidths);
 export const shadow = createSelector(getShadows);
+export const size = createSelector(getSizes);
+export const duration = createSelector(getDurations);

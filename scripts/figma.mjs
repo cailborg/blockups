@@ -5,16 +5,17 @@ import fetch from "node-fetch";
 
 const nonFigmaDefinedStyleProperties = {
   borderStyles: {
-    None: { value: "none" },
-    Dotted: { value: "dotted" },
-    Solid: { value: "solid" },
+    none: "none",
+    dotted: "dotted",
+    solid: "solid",
   },
   durations: {
-    Instant: { value: "0s" },
-    Immediate: { value: "0.15s" },
-    Quick: { value: "0.25s" },
-    Moderate: { value: "0.5s" },
-    Slow: { value: "1s" },
+    instant: 0,
+    immediate: 150,
+    quick: 250,
+    moderate: 500,
+    slow: 1000,
+    glacial: 2000,
   },
 };
 
@@ -53,6 +54,16 @@ const extractStyleProperties = (layer) => {
       return {
         space: Object.fromEntries(
           layer.children.map((space) => [[space.name], space.size.x])
+        ),
+      };
+
+    case "sizes":
+      return {
+        sizes: Object.fromEntries(
+          layer.children.map((sizes) => [
+            sizes.name,
+            sizes.absoluteBoundingBox.width,
+          ])
         ),
       };
 

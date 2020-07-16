@@ -7,15 +7,16 @@ interface TestComponentProps {
 }
 
 const StyledDiv = styled.div`
-  color: ${theme.color("primary", 9)};
-  background: ${theme.color("success", 3)};
+  color: ${theme.color("purple", 9)};
+  background: ${theme.color("red", 3)};
   border: 1px solid black;
   padding: ${theme.space("m")};
-  width: 360px;
+  width: ${theme.size("m")};
   text-align: center;
   border-radius: ${theme.radius("m")};
   border-width: ${theme.borderWidth("thick")};
   box-shadow: ${theme.shadow("medium")};
+  animation-duration: ${theme.duration("quick")};
 `;
 
 const StyledHeading = styled.h1`
