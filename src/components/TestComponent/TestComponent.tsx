@@ -10,7 +10,7 @@ const StyledDiv = styled.div`
   color: ${theme.color("primary", 9)};
   background: ${theme.color("success", 3)};
   border: 1px solid black;
-  padding: ${theme.space(2)};
+  padding: ${theme.space("m")};
   width: 360px;
   text-align: center;
 `;

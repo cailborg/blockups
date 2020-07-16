@@ -73,7 +73,21 @@ const theme = {
       "hsl(122, 39%, 14%)",
     ],
   },
-  space: [4, 8, 12, 16, 24, 32, 48, 64, 96, 128, 192, 256, 384, 512, 640, 768],
+
+  space: {
+    massive: 96,
+    jumbo: 80,
+    xxxl: 64,
+    xxl: 56,
+    xl: 48,
+    l: 40,
+    m: 32,
+    s: 24,
+    xs: 16,
+    xxs: 12,
+    xxxs: 8,
+    tiny: 4,
+  },
 
   fontSize: {
     "heading-jumbo": 96,
@@ -112,23 +126,8 @@ export type ThemeProps = { theme?: Theme };
 
 export type ColorType = keyof Theme["colors"];
 export type ColorIndex = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
-export type SpaceIndex =
-  | 0
-  | 1
-  | 2
-  | 3
-  | 4
-  | 5
-  | 6
-  | 7
-  | 8
-  | 9
-  | 10
-  | 11
-  | 12
-  | 13
-  | 14
-  | 15;
+
+export type Space = keyof Theme["space"];
 
 export type FontSize = keyof Theme["fontSize"];
 

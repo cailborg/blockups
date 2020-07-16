@@ -41,7 +41,9 @@ const extractStyleProperties = (layer) => {
 
     case "space":
       return {
-        space: Array.from(layer.children.map((space) => space.size.x)),
+        space: Object.fromEntries(
+          layer.children.map((space) => [[space.name], space.size.x])
+        ),
       };
 
     case "typography":

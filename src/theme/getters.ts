@@ -2,7 +2,7 @@ import defaultTheme, {
   ColorType,
   ColorIndex,
   ThemeProps,
-  SpaceIndex,
+  Space,
   FontSize,
   LineHeight,
 } from "./theme";
@@ -20,8 +20,8 @@ export function getColor(
   return getTheme(props).colors[type][index];
 }
 
-export function getSpace(index: SpaceIndex, props?: ThemeProps) {
-  return getTheme(props).space[index] + "px";
+export function getSpace(space: Space, props?: ThemeProps) {
+  return getTheme(props).space[space] + "px";
 }
 
 export function getFontSize(fontSize: FontSize, props?: ThemeProps) {
