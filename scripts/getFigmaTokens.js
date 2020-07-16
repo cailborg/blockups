@@ -1,7 +1,7 @@
-import fs from "fs";
-import fetch from "node-fetch";
-
-//////////////////////////////////////////////
+const dotenv = require("dotenv");
+dotenv.config();
+const fs = require("fs");
+const fetch = require("node-fetch");
 
 const nonFigmaDefinedStyleProperties = {
   borderStyles: {
@@ -139,11 +139,11 @@ const extractStyleProperties = (layer) => {
 (async () => {
   try {
     const response = await fetch(
-      `https://api.figma.com/v1/files/alc7Ukil6ncg1lCB2K45Ll?geometry=paths`,
+      `https://api.figma.com/v1/files/${process.env.FIGMA_FILE_ID}?geometry=paths`,
 
       {
         headers: {
-          "X-Figma-Token": "53641-50575ca2-4765-4b37-b68a-d321f48db7b3",
+          "X-Figma-Token": process.env.FIGMA_PAT,
         },
       }
     );

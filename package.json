@@ -23,6 +23,7 @@
     "@types/styled-components": "^5.1.1",
     "babel-loader": "^8.1.0",
     "babel-preset-react-app": "^9.1.2",
+    "dotenv": "^8.2.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "25.5.4",
     "node": "^14.5.0",
@@ -49,6 +50,6 @@
     "storybook:export": "build-storybook",
     "test": "jest",
     "test:watch": "jest --watch",
-    "figma": "node scripts/getFigmaTokens.mjs"
+    "figma": "node scripts/getFigmaTokens.js"
   }
 }
