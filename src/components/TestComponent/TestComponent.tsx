@@ -16,7 +16,8 @@ const StyledDiv = styled.div`
 `;
 
 const StyledHeading = styled.h1`
-  font-size: ${theme.fontSize(0)};
+  font-size: ${theme.fontSize("heading-xs")};
+  line-height: ${theme.lineHeight("body-3")};
 `;
 
 const StyledDescription = styled.h2``;

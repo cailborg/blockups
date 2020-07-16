@@ -75,13 +75,34 @@ const theme = {
   },
   space: [4, 8, 12, 16, 24, 32, 48, 64, 96, 128, 192, 256, 384, 512, 640, 768],
 
-  fontSize: [10, 12, 14, 16, 18, 20, 24, 32, 48, 64, 96],
+  fontSize: {
+    "heading-jumbo": 96,
+    "heading-xxl": 64,
+    "heading-xl": 48,
+    "heading-l": 32,
+    "heading-m": 24,
+    "heading-s": 20,
+    "heading-xs": 16,
+    "body-1": 20,
+    "body-2": 16,
+    "body-3": 14,
+    "button-1": 16,
+    "button-2": 14,
+  },
 
   lineHeight: {
-    narrow: 1.15,
-    normal: 1.3,
-    spaced: 1.5,
-    wide: 1.7,
+    "heading-jumbo": 112,
+    "heading-xxl": 80,
+    "heading-xl": 60,
+    "heading-l": 40,
+    "heading-m": 30,
+    "heading-s": 24,
+    "heading-xs": 24,
+    "body-1": 32,
+    "body-2": 24,
+    "body-3": 16,
+    "button-1": 24,
+    "button-2": 20,
   },
 };
 
@@ -109,7 +130,7 @@ export type SpaceIndex =
   | 14
   | 15;
 
-export type FontSizeIndex = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
+export type FontSize = keyof Theme["fontSize"];
 
 export type LineHeight = keyof Theme["lineHeight"];
 

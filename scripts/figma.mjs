@@ -46,18 +46,14 @@ const extractStyleProperties = (layer) => {
 
     case "typography":
       return {
-        fontSize: Array.from(
-          [
-            ...new Set(
-              Array.from(layer.children.map((type) => type.style.fontSize))
-            ),
-          ].sort((a, b) => a - b)
-        ),
         fonts: Object.fromEntries(
           layer.children.map((type) => [
             [type.name],
             `${type.style.fontFamily.replace(/\s+/g, "")}, san-serif`,
           ])
+        ),
+        fontSize: Object.fromEntries(
+          layer.children.map((type) => [[type.name], type.style.fontSize])
         ),
         fontWeight: Object.fromEntries(
           layer.children.map((type) => [[type.name], type.style.fontWeight])
