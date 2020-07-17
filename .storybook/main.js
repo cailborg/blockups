@@ -10,6 +10,7 @@ module.exports = {
         sourceLoaderOptions: null,
       },
     },
+    "@storybook/addon-knobs/register",
   ],
   webpackFinal: async (config) => {
     config.module.rules.push({
