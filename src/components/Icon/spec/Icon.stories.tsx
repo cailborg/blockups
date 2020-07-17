@@ -1,8 +1,6 @@
 import React from "react";
 import Icon from "../Icon";
 import page from "./Icon.mdx";
-// import { text } from "@storybook/addon-knobs";
-import { theme, useTheme } from "../../../theme";
 
 export default {
   title: "Components/Icon",
@@ -13,8 +11,5 @@ export default {
 };
 
 export const Standard = () => {
-  // const name = text("Icon Name", "Alert");
-  // const color = text("Color");
-  const theme = useTheme();
-  return <Icon name="alert" color={theme.color("purple", 9)} />;
+  return <Icon name="alert" color="purple" index={9} />;
 };

@@ -1,11 +1,12 @@
 import React from "react";
-// import styled from "styled-components";
+import styled from "styled-components";
 import data from "./iconsConfig.json";
-// import { theme } from "../../theme";
+import { theme, Theme, ColorIndex } from "../../theme";
 
 interface IconProps {
   name: keyof typeof data;
-  color?: string;
+  color?: keyof Theme["colors"];
+  index?: ColorIndex;
 }
 
 const getIconConfig = (name: keyof typeof data) => {
@@ -14,10 +15,13 @@ const getIconConfig = (name: keyof typeof data) => {
   }
 };
 
-const Icon: React.FC<IconProps> = ({ name, color }) => {
+const Icon: React.FC<IconProps> = ({ name, color = "neutral", index }) => {
+  const StyledSVG = styled.svg`
+    fill: ${theme.color(color, index)};
+  `;
   const values = getIconConfig(name) as { drawn: string; title: string };
   return (
-    <svg
+    <StyledSVG
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -26,7 +30,7 @@ const Icon: React.FC<IconProps> = ({ name, color }) => {
     >
       <title>{values.title}</title>
       <path d={values.drawn} fillRule="evenodd" clipRule="evenodd" />
-    </svg>
+    </StyledSVG>
   );
 };
 
