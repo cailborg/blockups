@@ -1,7 +1,7 @@
 module.exports = {
   roots: ["./src"],
   setupFilesAfterEnv: ["./jest.setup.ts"],
-  moduleFileExtensions: ["ts", "tsx", "js", "json"],
+  moduleFileExtensions: ["ts", "tsx", "js", "json", "jsx"],
   testPathIgnorePatterns: ["node_modules/"],
   transform: {
     "^.+\\.tsx?$": "ts-jest",
