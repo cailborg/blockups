@@ -11,9 +11,12 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.10.4",
+    "@mdx-js/react": "^1.6.10",
     "@rollup/plugin-commonjs": "^13.0.0",
+    "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^8.1.0",
     "@storybook/addon-docs": "^5.3.19",
+    "@storybook/addon-knobs": "^5.3.19",
     "@storybook/addon-storyshots": "^5.3.19",
     "@storybook/react": "^5.3.19",
     "@testing-library/jest-dom": "^5.11.0",
@@ -26,6 +29,7 @@
     "dotenv": "^8.2.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "25.5.4",
+    "jsdom": "^16.3.0",
     "node": "^14.5.0",
     "node-fetch": "^2.6.0",
     "react": "^16.13.1",
@@ -37,6 +41,7 @@
     "rollup-plugin-postcss": "^3.1.2",
     "rollup-plugin-typescript2": "^0.27.1",
     "styled-components": "^5.1.1",
+    "svgo": "^1.3.2",
     "ts-jest": "^26.1.1",
     "typescript": "^3.9.6"
   },
@@ -50,6 +55,7 @@
     "storybook:export": "build-storybook",
     "test": "jest",
     "test:watch": "jest --watch",
-    "figma": "node scripts/getFigmaTokens.js"
+    "figma:tokens": "node scripts/getFigmaTokens.js",
+    "figma:icons": "node scripts/getFigmaIcons.js"
   }
 }
